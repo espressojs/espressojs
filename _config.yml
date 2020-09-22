@@ -1,4 +1,6 @@
 source: ./docs
 include:
+  - modules
+  - assets
   - "_*_.html"
   - "_*_.*.html"
