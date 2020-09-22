@@ -10,7 +10,7 @@
         "*.md",
         "*.sh"
       ],
-      "message": "chore: published artifacts"
+      "message": "chore: Published artifacts"
     },
     "bootstrap": {
       "npmClientArgs": ["--no-package-lock"]

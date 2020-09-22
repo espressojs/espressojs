@@ -20,9 +20,15 @@ jobs:
       - name: Build
         run: |
           npm run build
+
+      - name: Git
+        run: |
+          git config --global user.name 'Nicholas Panella'
+          git config --global user.email 'nickjpanella@gmail.com'
       
       - name: Publish
         env:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm run ci:publish
