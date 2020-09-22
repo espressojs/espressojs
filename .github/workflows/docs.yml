@@ -28,6 +28,10 @@ jobs:
       - name: Status
         run: |
           git status
+
+      - name: Pull
+        run: |
+          git pull
           
       - name: Commit
         uses: EndBug/add-and-commit@v4
