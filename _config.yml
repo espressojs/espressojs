@@ -1,4 +1,5 @@
 source: ./docs
+ignore_theme_config: true
 include:
   - modules
   - assets
