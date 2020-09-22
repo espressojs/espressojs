@@ -1,0 +1,68 @@
+{
+  "name": "@espresso.js/espressojs",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap --hoist",
+    "postinstall": "npm run bootstrap",
+    "docs": "typedoc",
+    "clean": "rimraf packages/*/lib/*",
+    "build": "npm run clean && lerna run tsc --stream",
+    "lint": "eslint **/src/**/*.{ts,tsx}",
+    "lint:fix": "eslint **/src/**/*.{ts,tsx} --fix",
+    "ci:publish": "lerna publish --yes --loglevel debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/espressojs/espressojs.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "npm",
+    "expressjs",
+    "typescript",
+    "learna",
+    "monorepo"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/espressojs/espressojs/issues"
+  },
+  "homepage": "https://github.com/espressojs/espressojs#readme",
+  "engines": {
+    "node": "^12",
+    "npm": "^6"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
+    "eslint": "^7.9.0",
+    "husky": "^4.3.0",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.4.0",
+    "rimraf": "^3.0.2",
+    "typedoc": "^0.19.2",
+    "typedoc-plugin-lerna-packages": "^0.3.1",
+    "typescript": "^4.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}

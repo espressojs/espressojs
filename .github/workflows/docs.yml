@@ -1,0 +1,32 @@
+name: Documentation
+
+on:
+  push:
+    branches: [ develop ]
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Install
+        run: |
+          npm install
+
+      - name: Generate
+        run: |
+          npm run docs
+          
+      - name: Commit
+        uses: EndBug/add-and-commit@v4
+        with:
+          author_name: Your Name
+          author_email: mail@example.com
+          message: "Your commit message"
+          add: "*.js"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

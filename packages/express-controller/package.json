@@ -1,0 +1,16 @@
+{
+  "name": "@espresso.js/express-controller",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "private":false,
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
