@@ -1,5 +1,5 @@
 {
-  "name": "@espresso.js/express-controller",
+  "name": "@espresso-js/express-controller",
   "version": "0.0.5",
   "license": "MIT",
   "main": "lib/index.js",
