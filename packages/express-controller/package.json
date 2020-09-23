@@ -1,14 +1,20 @@
 {
   "name": "@espresso.js/express-controller",
   "version": "0.0.4",
+  "license": "MIT",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
     "tsc": "tsc"
   },
-  "files": [
-    "lib"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/espressojs/espressojs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/espressojs/espressojs/issues"
+  },
+  "homepage": "https://github.com/espressojs/espressojs#readme",
   "publishConfig": {
     "access": "public"
   },
@@ -20,5 +26,8 @@
   "devDependencies": {
     "@types/express": "^4.17.8",
     "@types/lodash": "^4.14.161"
-  }
+  },
+  "files": [
+    "lib"
+  ]
 }
