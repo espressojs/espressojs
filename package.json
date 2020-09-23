@@ -2,11 +2,14 @@
   "name": "@espresso.js/espressojs",
   "version": "1.0.0",
   "description": "",
+  "keywords": [ "node", "nodejs", "npm", "expressjs", "typescript", "learna", "monorepo"],
   "private": true,
+  "author": "Nicholas Panella",
+  "license": "MIT",
   "scripts": {
     "bootstrap": "lerna bootstrap --hoist",
     "postinstall": "npm run bootstrap",
-    "docs": "md-typedoc -o ./",
+    "docs": "typedoc",
     "clean": "rimraf packages/*/lib/*",
     "build": "npm run clean && lerna run tsc --stream",
     "lint": "eslint **/src/**/*.{ts,tsx}",
@@ -17,17 +20,6 @@
     "type": "git",
     "url": "git+ssh://git@github.com/espressojs/espressojs.git"
   },
-  "keywords": [
-    "node",
-    "nodejs",
-    "npm",
-    "expressjs",
-    "typescript",
-    "learna",
-    "monorepo"
-  ],
-  "author": "",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/espressojs/espressojs/issues"
   },
@@ -39,7 +31,7 @@
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
-    "@espresso.js/md-typedoc": "file:../mdtypdoc/espresso.js-md-typedoc-1.0.1.tgz",
+    "@espresso.js/md-typedoc": "file:../mdtypedoc/espresso.js-md-typedoc-1.0.1.tgz",
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
     "eslint": "^7.9.0",
@@ -65,6 +57,5 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  },
-  "dependencies": {}
+  }
 }
