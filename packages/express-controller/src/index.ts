@@ -1,5 +1,6 @@
 import chalk from 'chalk';
 import express, { Router } from 'express';
+import { toUpper } from 'lodash';
 import { Controller } from './types'
 
 /**
@@ -22,8 +23,14 @@ export default function withControllers(controllers: Controller[], verbose?: boo
   }
 
   if(verbose) {
-    console.log(chalk`{green all controllers added to router}`);
-    console.log(router.stack);
+    console.log(chalk`{yellowBright.bold Loading route controllers...}`);
+    
+    router.stack
+      .forEach(
+        ({route}) => console.log(chalk`  {whiteBright.bold ${Object.keys(route.methods).map(toUpper)}} {white ${route.path}}`)
+      );
+  
+    console.log(chalk`{green.bold All controllers added to router!}`);
   }
 
   return router

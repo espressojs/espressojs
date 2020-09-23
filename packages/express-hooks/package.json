@@ -1,6 +1,6 @@
 {
-  "name": "@espresso-js/express-controller",
-  "version": "0.0.5",
+  "name": "@espresso-js/express-hooks",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -20,7 +20,8 @@
   },
   "dependencies": {
     "chalk": "4.1.0",
-    "lodash": "4.17.20"
+    "lodash": "4.17.20",
+    "awilix": "4.2.6"
   },
   "devDependencies": {
     "@types/express": "^4.17.8",
