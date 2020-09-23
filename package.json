@@ -31,7 +31,6 @@
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
-    "@espresso.js/md-typedoc": "file:../mdtypedoc/espresso.js-md-typedoc-1.0.1.tgz",
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
     "eslint": "^7.9.0",
