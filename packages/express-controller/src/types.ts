@@ -27,6 +27,11 @@ export type ControlledRoute = {
 export type ControllerContext = ControlledRoute[];
 
 export type Controller = {
+  /**
+   * @name add
+   * @description add route(s) to your controller, either individually or in bulk
+   * @param route 
+   */
   add(...route: ControlledRoute[]): void;
   export(router: Router): void;
 };
