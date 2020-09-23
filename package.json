@@ -2,7 +2,15 @@
   "name": "@espresso.js/espressojs",
   "version": "1.0.0",
   "description": "",
-  "keywords": [ "node", "nodejs", "npm", "expressjs", "typescript", "learna", "monorepo"],
+  "keywords": [
+    "node",
+    "nodejs",
+    "npm",
+    "expressjs",
+    "typescript",
+    "learna",
+    "monorepo"
+  ],
   "private": true,
   "author": "Nicholas Panella",
   "license": "MIT",
